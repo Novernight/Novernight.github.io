@@ -22,7 +22,7 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"novernight.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="整体架构  客户层组件 Web层组件 后台数据库  静态与动态web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javaweb-base">
+<meta property="og:title" content="Javaweb理论与实践视频笔记">
 <meta property="og:url" content="http://novernight.github.io/2021/07/21/Javaweb-basic/index.html">
 <meta property="og:site_name" content="Novernight">
 <meta property="og:description" content="整体架构  客户层组件 Web层组件 后台数据库  静态与动态web">
@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://novernight.github.io/2021/07/21/Javaweb-basic/image-20210721152406057.png">
 <meta property="og:image" content="http://novernight.github.io/2021/07/21/Javaweb-basic/image-20210721152421132.png">
 <meta property="article:published_time" content="2021-07-21T07:05:27.000Z">
-<meta property="article:modified_time" content="2021-07-22T01:38:15.838Z">
+<meta property="article:modified_time" content="2021-07-25T09:16:36.847Z">
 <meta property="article:author" content="Novernight">
 <meta property="article:tag" content="JavaWeb">
 <meta name="twitter:card" content="summary">
@@ -43,10 +43,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://novernight.github.io/2021/07/21/Javaweb-basic/","path":"2021/07/21/Javaweb-basic/","title":"Javaweb-base"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://novernight.github.io/2021/07/21/Javaweb-basic/","path":"2021/07/21/Javaweb-basic/","title":"Javaweb理论与实践视频笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Javaweb-base | Novernight</title>
+<title>Javaweb理论与实践视频笔记 | Novernight</title>
   
 
 
@@ -153,7 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">整体架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%B8%8E%E5%8A%A8%E6%80%81web"><span class="nav-number">2.</span> <span class="nav-text">静态与动态web</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tomcat"><span class="nav-number">3.</span> <span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Tomcat%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.</span> <span class="nav-text">Tomcat目录结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%91%E5%B8%83web%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.2.</span> <span class="nav-text">发布web应用程序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%9B%AE%E5%BD%95%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.</span> <span class="nav-text">虚拟目录的配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%A6%96%E9%A1%B5"><span class="nav-number">3.4.</span> <span class="nav-text">配置首页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Eclipse%E9%9B%86%E6%88%90Tomcat"><span class="nav-number">3.5.</span> <span class="nav-text">Eclipse集成Tomcat</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Servlet%E7%AE%80%E4%BB%8B"><span class="nav-number">4.</span> <span class="nav-text">Servlet简介</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Servlet%E4%B8%8EServlet%E5%AE%B9%E5%99%A8"><span class="nav-number">4.1.</span> <span class="nav-text">Servlet与Servlet容器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#servlet%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0"><span class="nav-number">4.2.</span> <span class="nav-text">servlet程序实现</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">整体架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%B8%8E%E5%8A%A8%E6%80%81web"><span class="nav-number">2.</span> <span class="nav-text">静态与动态web</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tomcat"><span class="nav-number">3.</span> <span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Tomcat%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.</span> <span class="nav-text">Tomcat目录结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%91%E5%B8%83web%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.2.</span> <span class="nav-text">发布web应用程序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%9B%AE%E5%BD%95%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.</span> <span class="nav-text">虚拟目录的配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%A6%96%E9%A1%B5"><span class="nav-number">3.4.</span> <span class="nav-text">配置首页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Eclipse%E9%9B%86%E6%88%90Tomcat"><span class="nav-number">3.5.</span> <span class="nav-text">Eclipse集成Tomcat</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Servlet%E7%AE%80%E4%BB%8B"><span class="nav-number">4.</span> <span class="nav-text">Servlet简介</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Servlet%E4%B8%8EServlet%E5%AE%B9%E5%99%A8"><span class="nav-number">4.1.</span> <span class="nav-text">Servlet与Servlet容器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#servlet%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0"><span class="nav-number">4.2.</span> <span class="nav-text">servlet程序实现</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSP%E5%AE%9E%E8%B7%B5%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0"><span class="nav-number">5.</span> <span class="nav-text">JSP实践视频笔记</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -169,7 +169,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -182,7 +182,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -246,7 +246,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javaweb-base
+          Javaweb理论与实践视频笔记
         </h1>
 
         <div class="post-meta-container">
@@ -264,7 +264,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-22 09:38:15" itemprop="dateModified" datetime="2021-07-22T09:38:15+08:00">2021-07-22</time>
+        <time title="Modified: 2021-07-25 17:16:36" itemprop="dateModified" datetime="2021-07-25T17:16:36+08:00">2021-07-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -361,6 +361,8 @@
 <h5 id="servlet程序实现"><a href="#servlet程序实现" class="headerlink" title="servlet程序实现"></a>servlet程序实现</h5><ul>
 <li>继承httpServlet类，至少复写doGet方法</li>
 </ul>
+<h4 id="JSP实践视频笔记"><a href="#JSP实践视频笔记" class="headerlink" title="JSP实践视频笔记"></a>JSP实践视频笔记</h4><p>视频源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kJ411i7wf?p=6">https://www.bilibili.com/video/BV1kJ411i7wf?p=6</a></p>
+<p>Step1:定义表，创建数据库。</p>
 
     </div>
 

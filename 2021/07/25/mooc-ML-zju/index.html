@@ -20,31 +20,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"novernight.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="eclipse新建Sevlet错误： “HttpServlet cannot be resolved to a type “ 包导入以后，错误仍然存在。  原因及解决：">
+<meta name="description" content="1.1 ML定义 非显著式编程：机器是自由的，可以采取一切行为。人为将行为收益确定以后，让机器自己去寻找收益最大化的方式。  1.2 ML分类 监督学习：所有经验都是人工采集并且输入的； 传统监督学习：数据都有标签 半监督学习：一部分有，一部分没有标签。 非监督学习：所有数据都没有标签，根据一定的假设来进行分类；   强化学习：经验是计算机与环境进行互动获得的；">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初识Servlet">
-<meta property="og:url" content="http://novernight.github.io/2021/07/22/firstmeetServlet/index.html">
+<meta property="og:title" content="mooc_note-机器学习-浙江大学">
+<meta property="og:url" content="http://novernight.github.io/2021/07/25/mooc-ML-zju/index.html">
 <meta property="og:site_name" content="Novernight">
-<meta property="og:description" content="eclipse新建Sevlet错误： “HttpServlet cannot be resolved to a type “ 包导入以后，错误仍然存在。  原因及解决：">
+<meta property="og:description" content="1.1 ML定义 非显著式编程：机器是自由的，可以采取一切行为。人为将行为收益确定以后，让机器自己去寻找收益最大化的方式。  1.2 ML分类 监督学习：所有经验都是人工采集并且输入的； 传统监督学习：数据都有标签 半监督学习：一部分有，一部分没有标签。 非监督学习：所有数据都没有标签，根据一定的假设来进行分类；   强化学习：经验是计算机与环境进行互动获得的；">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://novernight.github.io/2021/07/22/firstmeetServlet/image-20210722102339091.png">
-<meta property="article:published_time" content="2021-07-22T02:20:33.000Z">
-<meta property="article:modified_time" content="2021-07-22T03:42:22.008Z">
+<meta property="og:image" content="http://novernight.github.io/2021/07/25/mooc-ML-zju/image-20210725150830662.png">
+<meta property="article:published_time" content="2021-07-25T07:05:08.000Z">
+<meta property="article:modified_time" content="2021-07-29T12:17:32.953Z">
 <meta property="article:author" content="Novernight">
-<meta property="article:tag" content="Servlet">
-<meta property="article:tag" content="Javaweb">
+<meta property="article:tag" content="MachineLearing">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://novernight.github.io/2021/07/22/firstmeetServlet/image-20210722102339091.png">
+<meta name="twitter:image" content="http://novernight.github.io/2021/07/25/mooc-ML-zju/image-20210725150830662.png">
 
 
-<link rel="canonical" href="http://novernight.github.io/2021/07/22/firstmeetServlet/">
+<link rel="canonical" href="http://novernight.github.io/2021/07/25/mooc-ML-zju/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://novernight.github.io/2021/07/22/firstmeetServlet/","path":"2021/07/22/firstmeetServlet/","title":"初识Servlet"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://novernight.github.io/2021/07/25/mooc-ML-zju/","path":"2021/07/25/mooc-ML-zju/","title":"mooc_note-机器学习-浙江大学"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>初识Servlet | Novernight</title>
+<title>mooc_note-机器学习-浙江大学 | Novernight</title>
   
 
 
@@ -151,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#eclipse%E6%96%B0%E5%BB%BASevlet"><span class="nav-number">1.</span> <span class="nav-text">eclipse新建Sevlet</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">错误：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">原因及解决：</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-ML%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">1.1 ML定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-ML%E5%88%86%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">1.2 ML分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-No-free-Lunch-Theorem"><span class="nav-number">3.</span> <span class="nav-text">1.3 No free Lunch Theorem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA-%E2%80%93%E7%BA%BF%E6%80%A7%E5%8F%AF%E5%88%86%E5%AE%9A%E4%B9%89"><span class="nav-number">4.</span> <span class="nav-text">2.1 支持向量机 –线性可分定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA-%E2%80%93%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">5.</span> <span class="nav-text">2.2 支持向量机 –问题描述</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -231,7 +230,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://novernight.github.io/2021/07/22/firstmeetServlet/">
+    <link itemprop="mainEntityOfPage" href="http://novernight.github.io/2021/07/25/mooc-ML-zju/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -244,7 +243,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          初识Servlet
+          mooc_note-机器学习-浙江大学
         </h1>
 
         <div class="post-meta-container">
@@ -254,9 +253,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-22 10:20:33 / Modified: 11:42:22" itemprop="dateCreated datePublished" datetime="2021-07-22T10:20:33+08:00">2021-07-22</time>
+      <time title="Created: 2021-07-25 15:05:08" itemprop="dateCreated datePublished" datetime="2021-07-25T15:05:08+08:00">2021-07-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-29 20:17:32" itemprop="dateModified" datetime="2021-07-29T20:17:32+08:00">2021-07-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
     </span>
 
   
@@ -276,21 +290,88 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><img src="/2021/07/22/firstmeetServlet/image-20210722102339091.png" alt="image-20210722102339091"></p>
-<h4 id="eclipse新建Sevlet"><a href="#eclipse新建Sevlet" class="headerlink" title="eclipse新建Sevlet"></a>eclipse新建Sevlet</h4><h5 id="错误："><a href="#错误：" class="headerlink" title="错误："></a>错误：</h5><ol>
-<li>“HttpServlet cannot be resolved to a type “</li>
-<li>包导入以后，错误仍然存在。</li>
-</ol>
-<h5 id="原因及解决："><a href="#原因及解决：" class="headerlink" title="原因及解决："></a>原因及解决：</h5><ol>
-<li></li>
+        <p><img src="/2021/07/25/mooc-ML-zju/image-20210725150830662.png" alt="image-20210725150830662"></p>
+<h4 id="1-1-ML定义"><a href="#1-1-ML定义" class="headerlink" title="1.1 ML定义"></a>1.1 ML定义</h4><ul>
+<li>非显著式编程：机器是自由的，可以采取一切行为。人为将行为收益确定以后，让机器自己去寻找收益最大化的方式。</li>
+</ul>
+<h4 id="1-2-ML分类"><a href="#1-2-ML分类" class="headerlink" title="1.2 ML分类"></a>1.2 ML分类</h4><ul>
+<li>监督学习：所有经验都是人工采集并且输入的；<ul>
+<li>传统监督学习：数据都有标签</li>
+<li>半监督学习：一部分有，一部分没有标签。</li>
+<li>非监督学习：所有数据都没有标签，根据一定的假设来进行分类；</li>
+</ul>
+</li>
+<li>强化学习：经验是计算机与环境进行互动获得的；</li>
+</ul>
+<p>但是分类并不是绝对的，可以混用；</p>
+<h4 id="1-3-No-free-Lunch-Theorem"><a href="#1-3-No-free-Lunch-Theorem" class="headerlink" title="1.3 No free Lunch Theorem"></a>1.3 No free Lunch Theorem</h4><p>在一些情况下的机器学习算法表现好，在某一些情况下一定表现不好。不存在什么情况下表现都好的机器学习算法。</p>
+<ul>
+<li>如果不对特征空间的先验分布有假设，那么所有算法的表现都是一样的；</li>
+<li>假设有可能是错误的。我们所假设的东西，是从大量的实践中得出来的，但这不一定就是完全正确的。比如太阳明天一定会升起，这是人们多年以来得出的结论，也有万有引力定律等理论支撑，但是这些理论支撑，也是支撑子啊一些更基础的假设上的。就像《三体》中，说到的射手与农场主这个理论，我们所认为的理论基础和规律，有可能只是一个巧合。</li>
+</ul>
+<h4 id="2-1-支持向量机-–线性可分定义"><a href="#2-1-支持向量机-–线性可分定义" class="headerlink" title="2.1 支持向量机 –线性可分定义"></a>2.1 支持向量机 –线性可分定义</h4><ul>
+<li><p>相较于决策树等，预测准确率较高，原因在于将低维度的线性不可分空间，转化为高维的线性可分空间。</p>
+</li>
+<li><p>线性可分 Linear Separable</p>
+<ul>
+<li>二维：存在一条直线可将样本分开</li>
+<li>三维：平面</li>
+</ul>
+</li>
+<li><p>线性不可分 Nonlinear Separable</p>
+<ul>
+<li>二维：不存在一条直线可将样本分开</li>
+<li>三维：不存在这个平面</li>
+</ul>
+</li>
+<li><p>数学定义：<br>假设我们有N个寻来你样本和他们的标签，其中${(X_1,y_1),(X_2,y_2)…..},$</p>
+<p>其中$X_i=<br>\left[<br> \begin{matrix}<br> x_i &amp; x_j<br>\end{matrix}<br>\right]^T \tag{2}$​​​​​,$y_i={+1,-1}$​​​</p>
+<p>y的+-1，分别属于不同的类；</p>
+</li>
+</ul>
+<h4 id="2-2-支持向量机-–问题描述"><a href="#2-2-支持向量机-–问题描述" class="headerlink" title="2.2 支持向量机 –问题描述"></a>2.2 支持向量机 –问题描述</h4><p>VB的理论：</p>
+<ol>
+<li>解决线性可分问题</li>
+<li>将线性可分问题的结论推广到线性不可分</li>
 </ol>
 <ul>
-<li>原因：jdk 里不包括servlet-api.jar 这个包。因此只能自己导入</li>
-<li>解决：右键项目名–选择properties–选择Java Build Path–选择Add External JARs–然后在自己电脑中找到servlet-api.jar。</li>
+<li>解决线性可分问题<ul>
+<li>存在无数个直线可将其分开</li>
+<li>最优化理论：margin最大。那条直线，在平移后，距离叉到的第一个支持向量之间的距离最大。</li>
+<li>最优化理论选出来的直线中，取平行线中间的直线</li>
 </ul>
-<ol start="2">
-<li>更换Tomcat。重新下载了Tomcat9.0然后重新导入，成功。</li>
-</ol>
+</li>
+</ul>
+<ul>
+<li><p>支持向量机的最优分类直线满足理论：</p>
+<ul>
+<li>该直线分开两类</li>
+<li>最大化间隔</li>
+<li>处于最大间隔中间</li>
+</ul>
+</li>
+<li><p>线性可分寻找最佳平面的公式：</p>
+<ul>
+<li>最小化：$\frac{1}{2}||w||^2$​，使得margin最大​</li>
+<li>限制条件：$y_i = (w^Tx_i+b\geq1)$</li>
+</ul>
+</li>
+</ul>
+<p>推导：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/129008328">https://zhuanlan.zhihu.com/p/129008328</a></p>
+<ul>
+<li><p>如果是线性不可分的情况：以上问题无解。因此最好放松限制条件，使得上述样本存在一个解</p>
+<ul>
+<li><p>方法：设置slack variable 松弛变量$\delta_i$​</p>
+</li>
+<li><p>限制条件:$y_i(w^TX_i+b）\geq1-\delta_i$​​​  i =1~N​​​​​ 且 $\delta_i\geq0$</p>
+</li>
+<li><p>最小化: $\frac{1}{2}||w||^2+C\sum_{i=1}^{N}\delta_i^2$​</p>
+</li>
+<li><p>存在超参数，人为设定调整的参数。</p>
+</li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -318,22 +399,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Servlet/" rel="tag"> <i class="fa fa-tag"></i> Servlet</a>
-              <a href="/tags/Javaweb/" rel="tag"> <i class="fa fa-tag"></i> Javaweb</a>
+              <a href="/tags/MachineLearing/" rel="tag"> <i class="fa fa-tag"></i> MachineLearing</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/07/21/Javaweb-basic/" rel="prev" title="Javaweb理论与实践视频笔记">
-                  <i class="fa fa-chevron-left"></i> Javaweb理论与实践视频笔记
+                <a href="/2021/07/22/firstmeetServlet/" rel="prev" title="初识Servlet">
+                  <i class="fa fa-chevron-left"></i> 初识Servlet
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/07/25/mooc-ML-zju/" rel="next" title="mooc_note-机器学习-浙江大学">
-                  mooc_note-机器学习-浙江大学 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -358,11 +435,11 @@
     </label>
     <select class="lang-select" data-canonical="" aria-label="Select language">
       
-        <option value="en" data-href="/2021/07/22/firstmeetServlet/" selected="">
+        <option value="en" data-href="/2021/07/25/mooc-ML-zju/" selected="">
           English
         </option>
       
-        <option value="zh-CN" data-href="/zh-CN/2021/07/22/firstmeetServlet/" selected="">
+        <option value="zh-CN" data-href="/zh-CN/2021/07/25/mooc-ML-zju/" selected="">
           简体中文
         </option>
       
